@@ -10,7 +10,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/artworks" do
-    refresh_db
+    # refresh_db
     erb :artworks
   end
 
