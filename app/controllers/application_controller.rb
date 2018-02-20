@@ -6,14 +6,13 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/" do
-    refresh_db
   	erb :index
   end
 
-  # get "/artworks" do
-  #   refresh_db
-  #   erb :artworks
-  # end
+  get "/artworks" do
+    refresh_db
+    erb :artworks
+  end
 
   def refresh_db
     mta_art_catalogue_url = "https://data.ny.gov/resource/qius-v36q.json"
