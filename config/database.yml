@@ -1,2 +1,2 @@
 adapter: postgresql
-database: 'db/mta_art'
+database: 'db/postgresql-tetrahedral-42154'
