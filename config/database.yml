@@ -1,2 +1,2 @@
-adapter: 'sqlite3'
-database: 'db/mta_art.db'
+adapter: postgresql
+database: 'db/mta_art'
