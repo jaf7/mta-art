@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MTA Art Pages</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <div class="list-group">
+      <% Artist.all.each do |artist| %>
+        <% artwork = Artwork.all.where("artist_id = #{artist.id}").first %>
+        <a href="<%= artwork.url %>" class="list-group-item list-group-item-action" target="_blank">
+          <h3><%= artist.full_name %></h3>
+          <p class="mb-1"><%= artwork.title %></p>
+        </a>
+
+        <!-- <li>
+            <%= artist.full_name %>
+            <%= artwork.url %>
+        </li> -->
+      <% end %>
+    </div>
+
+  </body>
+  <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+</html>
+
+
+<!-- # <% wall_posts = ["First post!", "Second post!", "Hello, it's your mother. Why don't you ever call me?"] %>
+#
+# <ul>
+#   <% wall_posts.each do |post| %>
+#     <li><%= post %></li>
+#   <% end %>
+# </ul>
+#
+# <ul>
+#   <li>First Post!</li>
+#   <li>Second Post!</li>
+#   <li>Hello, it's your mother. Why don't you ever call me?</li>
+# </ul> -->
