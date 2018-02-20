@@ -1,2 +1,5 @@
 adapter: postgresql
-database: 'db/postgresql-tetrahedral-42154'
+database: 'db/mta_art'
+
+default: &default
+  host: localhost
