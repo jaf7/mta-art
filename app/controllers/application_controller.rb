@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
     mta_art_catalogue_url = "https://data.ny.gov/resource/qius-v36q.json"
     arts_for_transit = JSON.parse(RestClient.get(mta_art_catalogue_url))
 
-    Artwork.delete_all
+    # Artwork.delete_all
 
     arts_for_transit.each do |entry|
       artist = Artist.find_or_create_by(
